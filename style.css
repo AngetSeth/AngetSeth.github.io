@@ -40,19 +40,22 @@ a {
 main {
     background: rgb(245, 238, 219);
     display: flex;
+    border: 2.75px solid rgb(223, 212, 178);
+    border-radius: 8px;
 }
 .sidebar {
     margin-right: 25px;
     padding: 10px;
 }
-.sidebar-img {
-    width: 200px;
-}
 .content {
     flex: 1;
     padding: 15px;
+    
 }
-
+.content {
+    position: relative;
+    width: 50%;
+  }
 /* portfolio styles */
 #interests {
     border: 4px silver ridge;
@@ -60,4 +63,16 @@ main {
 }
 h2, h3 {
     margin: 0px;
+}
+
+#roundedmenu {
+    border: 2px solid rgb(67, 145, 218);
+    border-radius: 50px 60px;
+  }
+
+.sidebar-img{
+    border: 3.5px solid rgb(192, 182, 153);
+    border-radius: 17.5px;
+    width: 350px;
+    height: 250px;
 }
