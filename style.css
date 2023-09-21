@@ -1,6 +1,8 @@
 body {
-    background: rgb(6, 63, 138);
-    color: rgb(45, 45, 45);
+    background-image: url(https://generations.krea.ai/images/0950069a-823f-4816-9c39-f7f65a9ec1e5.webp);
+    background-repeat: no-repeat;
+    background-size: 2000px 1000px;
+    color: rgb(46, 45, 8);
     padding: 10px;
     font-family: arial;
 }
@@ -11,7 +13,7 @@ body {
 
 /* navigation menu */
 nav {
-    background: rgb(1, 189, 247);
+    background: rgb(53, 82, 29);
    margin: 0 auto;
    margin-bottom: 20px;
     display: flex;
@@ -20,7 +22,7 @@ nav {
 h1 {
     display: flex;
     align-items: center;
-    color: white;
+    color: rgb(46, 45, 8);
     flex: 1;
     margin: 0;
 }
@@ -30,17 +32,23 @@ h1 {
 .nav-li {
     display: inline-block;
     padding: 0 10px;
+    transition: 200ms;
+}
+.nav-li:hover {
+    font-size: 25px;
+    transition: 200ms;
+   
 }
 a {
     text-decoration: none;
-    color: #fff;
+    color: #2E2D08;
 }
 
 /* main container area beneath menu */
 main {
-    background: rgb(245, 238, 219);
+    background: rgb(53, 82, 29);
     display: flex;
-    border: 2.75px solid rgb(223, 212, 178);
+    border: 4px solid rgb(34, 56, 15);
     border-radius: 8px;
 }
 .sidebar {
@@ -57,7 +65,7 @@ main {
     width: 50%;
   }
 #interests {
-    border: 4px silver ridge;
+    border: 4px rgb(124, 126, 46) ridge;
     padding: 8px;
 }
 h2, h3 {
@@ -65,19 +73,21 @@ h2, h3 {
 }
 
 #roundedmenu {
-    border: 2px solid rgb(67, 145, 218);
-    border-radius: 50px 60px;
+    border: 10px solid transparent;
+    padding: 15px;
+    border: 5px solid rgb(34, 56, 15);
+  border-radius: 50px 25px;
   }
 
 .sidebar-img{
-    border: 3.5px solid rgb(192, 182, 153);
+    border: 3.5px solid rgb(34, 56, 15);
     border-radius: 17.5px;
     width: 350px;
     height: 250px;
 }
  /* portfolio styles */
  .content h1 {
-     color: black;
+     color: (46, 45, 8);
   }
 
 #portfolio {
@@ -86,17 +96,40 @@ h2, h3 {
  }
 
 #portfolio li {
-    background: #fff;
+    background: #547703;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    transition: 250ms;
 }
 
 #portfolio li:hover {
-    background: #eee;
+    background: #466108;
+    padding: 15px;
+    transition: 250ms;
 }
 
 #portfolio a {
     text-decoration: none;
-    color: #454545;
+    color: #abc07b;
 }
+/* Container holding the image and the text */
+.sidebar {
+    position: relative;
+  }
+  
+  /* Bottom right text */
+  .overlay2 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(53, 82, 29);
+    color: rgb(128, 121, 1);
+    font-size: ;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 5px solid transparent;
+    padding: 10px;
+    border: 3px solid rgb(34, 56, 15);
+  }
+  
