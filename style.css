@@ -85,6 +85,7 @@ h2, h3 {
     width: 350px;
     height: 250px;
 }
+
  /* portfolio styles */
  .content h1 {
      color: (46, 45, 8);
@@ -133,3 +134,27 @@ h2, h3 {
     border: 3px solid rgb(34, 56, 15);
   }
   
+  /* Best Rick Grimes Images */
+
+  .RickCry1Image {
+    border: 3.5px solid rgb(34, 56, 15);
+    border-radius: 17.5px;
+    width: 350px;
+    height: 250px;
+}
+.RickStare1Image {
+    border: 3.5px solid rgb(34, 56, 15);
+    border-radius: 17.5px;
+    width: 350px;
+    height: 250px;
+}
+
+.RickCry1Text {
+ font-size: larger;
+ stroke-width: 10cm;
+}
+
+.RickStare1Text {
+    font-size: larger;
+    stroke-width: 10cm;
+}
