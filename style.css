@@ -35,14 +35,26 @@ h1 {
     transition: 200ms;
 }
 .nav-li:hover {
-    font-size: 25px;
+    font-size: 20px;
     transition: 200ms;
+    color: #76732e:
    
 }
 a {
     text-decoration: none;
     color: #2E2D08;
 }
+
+/* Other */
+.fade-in-text {
+    animation: fadeIn 1.5s;
+  }
+ 
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
 
 /* main container area beneath menu */
 main {
@@ -156,5 +168,22 @@ h2, h3 {
 
 .RickStare1Text {
     font-size: larger;
-    stroke-width: 10cm;
+    stroke-width: 10cm; 
+}
+
+.RickSweat1Image {
+    border: 3.5px solid rgb(34, 56, 15);
+    border-radius: 17.5px;
+    width: 350px;
+    height: 250px;
+}
+
+.RickSweat1Text {
+ font-size: larger;
+ stroke-width: 10cm;
+}
+
+.RickSweat1Text {
+    font-size: larger;
+    stroke-width: 10cm; 
 }
