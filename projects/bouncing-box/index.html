@@ -6,19 +6,26 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
+			
+			font-style: italic;
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(160, 5, 0);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
+			font-family: fantasy;
 			top: 100px;
 			left: 0px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
+		}
+		.box:hover{
+			background-color: rgb(184, 23, 18);
+			transition: 100ms;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -62,7 +69,13 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
+			var positionX = 0
+
+			var points = 0
 			
+			var speed = 10
+
+	
 
 			
 			/* 
@@ -71,8 +84,14 @@
 			turn it around! 
 			*/
 			function update() {
-				
-
+   				positionX = positionX + speed;
+   				moveBoxTo(positionX);
+				if(positionX > boardWidth){
+					speed = speed * -1
+				}
+				if(positionX < 0){
+					speed = speed * -1
+				}
 			};
 
 			/* 
@@ -81,10 +100,11 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
-
-			};
+   				positionX = 0;
+   				changeBoxText(points);
+  				points = points + 1
+				  speed = speed + 3
+			}
 		})();
 	</script>
 </body>

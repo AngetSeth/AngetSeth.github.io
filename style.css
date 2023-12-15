@@ -259,11 +259,13 @@ h2, h3 {
 .RickCry1Text {
  font-size: larger;
  stroke-width: 10cm;
+ color: white;
 }
 
 .RickStare1Text {
     font-size: larger;
     stroke-width: 10cm; 
+    color: white;
 }
 
 .RickSweat1Image {
@@ -277,11 +279,7 @@ h2, h3 {
 .RickSweat1Text {
  font-size: larger;
  stroke-width: 10cm;
-}
-
-.RickSweat1Text {
-    font-size: larger;
-    stroke-width: 10cm; 
+ color: white;
 }
 
 /*Update Log*/
