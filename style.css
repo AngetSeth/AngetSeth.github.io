@@ -89,7 +89,7 @@ p, h2, ul, h3 {
 }
 
 .shimmerIDrive:hover{
-  font-size: 35px;
+  rotate: 5deg;
   transition: 100ms;
 }
 
@@ -125,7 +125,7 @@ h1 {
 .nav-li:hover {
     rotate: 5deg;
     transition: 200ms;
-    color: rgb(28, 28, 28):
+    color: rgb(28, 28, 28);
    
 }
 a {
@@ -184,7 +184,7 @@ h2, h3 {
 .sidebar-img{
     border: 3.5px solid rgb(21, 21, 21);
     border-radius: 17.5px;
-    width: 325px;
+    width: 235px;
     height: 200px;
 }
 
@@ -231,7 +231,6 @@ h2, h3 {
     right: 20px;
     background-color: rgb(53, 82, 29);
     color: rgb(128, 121, 1);
-    font-size: ;
     padding-left: 20px;
     padding-right: 20px;
     border: 5px solid transparent;
@@ -322,7 +321,6 @@ h2, h3 {
   align-items: center;
   color: white;
   font-size: 20px
-  border-radius: border-radius: 50px 25px;;
 }
 
 .block:before,
