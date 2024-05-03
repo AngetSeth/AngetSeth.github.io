@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SMM Web</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+      <marquee class="rainbowtextloop">Gang stuff</marquee>
+      <div id="all-contents">
+        <div id="all-contents">
+            <nav class="block">
+                <h1 class="fade-in-text">Seth's Amazing Website fr</h1>
+                <ul id="nav-ul">
+                   <li class="nav-li">
+                   <a class="nav-a" href="index.html">Home</a>
+                 </li>
+                 <li class="nav-li">
+                   <a class="nav-a" href="portfolio.html">Portfolio</a>
+                <li class="nav-li">
+                  <a href="rickTheWalkingDead.html"> Rick Grimes Images </a>
+                 </li>
+                 <li class="nav-li">
+                  <a href="updatelog.html"> Update Log </a>
+            </li>
+             </ul>
+         </nav>
+</html>
+<main>
+    <div class="sidebar">
+        <h1>Best Rick Grimes Images</h1>
+        <div class="overlay">
+
+     <!-- Slideshow Code Goes Here -->
+
+
+
+       
+
+     <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="https://i.kym-cdn.com/entries/icons/original/000/044/927/rickgrimes_crying.jpg" style="width:100%">
+          <div class="text">Rick Grimes Crying</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="https://www.usmagazine.com/wp-content/uploads/2018/10/rick-walking-dead.jpg?w=1000&quality=55&strip=all" style="width:100%">
+          <div class="text">Rick Grimes Locked In</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="https://cdn3.whatculture.com/images/2018/01/b90fddb119f3c04a-600x338.jpeg" style="width:100%">
+          <div class="text">Rick Grimes Happy</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+
+
+        <!-- JAVASCRIPT CODE FOR SS -->
+
+
+
+        <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+        </script>
+
+
+     <!-- Slideshow Code Ends Here -->
+
+
+        </div>
+      </div>
+
+</main>
