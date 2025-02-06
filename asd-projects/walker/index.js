@@ -32,8 +32,8 @@ function runProgram(){
     speedY: 0,
   }
   var walker2 = {
-    positionX: 0,
-    positionY: 0,
+    positionX: 390,
+    positionY: 390,
     speedX: 0,
     speedY: 0,
   }
@@ -41,7 +41,11 @@ function runProgram(){
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
   $(document).on('keydown', handleKeyDown);                           // change 'eventType' to the type of event you want to handle
-  $(document).on('keyup', handleKeyUp); 
+  $(document).on('keyup', handleKeyUp);
+
+  var interval2 = setInterval(newFrame2, FRAMES_PER_SECOND_INTERVAL);
+  $(document).on('keydown', handleKeyDown2);   
+  $(document).on('keyup', handleKeyUp2);
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -51,12 +55,17 @@ function runProgram(){
   by calling this function and executing the code inside.
   */
   function newFrame() {
+    /*getDistance()*/
     repositionGameItem()
     wallCollision()
     redrawGameItem()
   }
 
-
+  function newFrame2() {
+    repositionGameItem2()
+    wallCollision2()
+    redrawGameItem2()
+  }
 
 
   
@@ -103,7 +112,45 @@ function runProgram(){
     }
   }
 
+  /* Walker 2 */
+  function handleKeyDown2(event) {
+    if (event.which === WASD.A){
+      walker2.speedX = -5
+      console.log("A Key Pressed")
+    }
+    else if (event.which === WASD.D){
+      walker2.speedX = 5
+      console.log("D Key Pressed")
+    }
+    else if (event.which === WASD.W){
+      walker2.speedY = -5
+      console.log("W Key Pressed")
+    }
+    else if (event.which === WASD.S){
+      walker2.speedY = 5
+      console.log("S Key Pressed")
+    }
+    
+  }
 
+  function handleKeyUp2(event){
+    if (event.which === WASD.A){
+      walker2.speedX = 0
+      console.log("A Key Released")
+    }
+    else if (event.which === WASD.D){
+      walker2.speedX = 0
+      console.log("D Key Released")
+    }
+    else if (event.which === WASD.W){
+      walker2.speedY = 0
+      console.log("W Key Released")
+    }
+    else if (event.which === WASD.S){
+      walker2.speedY = 0
+      console.log("S Key Released")
+    }
+  }
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
@@ -135,10 +182,43 @@ function runProgram(){
     }
   }
 
+  /*function getDistance(x1, y1, x2, y2){
+   let walker.positionX = x2 - x1;
+   let walker.positionY = y2 - y1;
+
+   return Math.sqrt(Math.pow(walker.positionX, 2) + Math.pow(walker.positionY, 2))
+  }
+
+  /* Walker 2 */
+  function repositionGameItem2(){
+    walker2.positionX += walker2.speedX;
+    walker2.positionY += walker2.speedY;
+  }
+
+  function redrawGameItem2(){
+    $("#walker2").css("top", walker2.positionY);
+    $("#walker2").css("left", walker2.positionX);
+  }
+  
+  function wallCollision2(){
+    if(walker2.positionX < 0){
+      walker2.speedX = walker2.positionX = 0
+    }
+    if(walker2.positionY < 0){
+      walker2.speedY = walker2.positionY = 0
+    }
+    if(walker2.positionX > 390){
+      walker2.speedX = walker2.positionX = 390
+    }
+    if(walker2.positionY > 390){
+      walker2.speedY = walker2.positionY = 390
+    }
+  }
 
   function endGame() {
     // stop the interval timer
     clearInterval(interval);
+    clearInterval(interval2);
 
     // turn off event handlers
     $(document).off();
